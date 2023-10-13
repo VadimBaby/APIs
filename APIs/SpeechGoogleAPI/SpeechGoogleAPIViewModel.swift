@@ -37,4 +37,44 @@ final class SpeechGoogleAPIViewModel: ObservableObject {
     private let manager = SpeechGoogleActor.shared
     
     private let soundManager = SoundManager.instanse
+    
+    private var tasks: [Task<Void, Never>] = []
+    
+    func getVoice(text: String) {
+         let task = Task {
+             do {
+                 
+                 await MainActor.run {
+                     self.isLoading = true
+                 }
+                 
+                 let voiceParameter: VoiceParameterModel = await speaker.getVoiceParameter()
+                 
+                 let response = try await manager.getResponse(text: text, voiceParameter: voiceParameter, rapidKey: self.rapidKey)
+                  
+                 let audioStream = try JSONDecoder().decode(SpeechGoogleAPIModel.self, from: response).audioStream
+                  
+                 await MainActor.run {
+                      do {
+                          self.voice = try soundManager.playSoundFromData(data: audioStream)
+                          self.error = nil
+                          self.currentTime = voice?.currentTime
+                      } catch {
+                          self.error = URLError(.badServerResponse)
+                          print(error.localizedDescription)
+                      }
+                     
+                     self.isLoading = false
+                  }
+             } catch {
+                 await MainActor.run {
+                     self.isLoading = false
+                     self.error = URLError(.badServerResponse)
+                 }
+                 print(error.localizedDescription)
+             }
+        }
+        
+        tasks.append(task)
+    }
 }
