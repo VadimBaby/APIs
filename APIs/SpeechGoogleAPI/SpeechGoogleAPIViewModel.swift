@@ -104,7 +104,7 @@ final class SpeechGoogleAPIViewModel: ObservableObject {
     }
     
     @MainActor
-    func setUpTimer() {
+    private func setUpTimer() {
         timerCancellables = Timer
             .publish(every: 0.1, on: .main, in: .common)
             .autoconnect()
