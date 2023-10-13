@@ -92,6 +92,18 @@ final class SpeechGoogleAPIViewModel: ObservableObject {
     }
     
     @MainActor
+    func playVoice() {
+        
+        let isPlaying = voice?.play()
+        
+        guard let isPlaying else { return }
+        
+        setUpTimer()
+        
+        self.isPlaying = isPlaying
+    }
+    
+    @MainActor
     func setUpTimer() {
         timerCancellables = Timer
             .publish(every: 0.1, on: .main, in: .common)
