@@ -77,4 +77,9 @@ final class SpeechGoogleAPIViewModel: ObservableObject {
         
         tasks.append(task)
     }
+    
+    func cancel() {
+        tasks.forEach{ $0.cancel() }
+        tasks = []
+    }
 }
