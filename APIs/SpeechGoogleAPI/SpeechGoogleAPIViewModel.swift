@@ -33,4 +33,8 @@ final class SpeechGoogleAPIViewModel: ObservableObject {
             UserDefaults.standard.set(rapidKey, forKey: "rapidKeyForGoogleSpeech")
         }
     }
+    
+    private let manager = SpeechGoogleActor.shared
+    
+    private let soundManager = SoundManager.instanse
 }
