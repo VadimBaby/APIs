@@ -7,6 +7,8 @@
 
 import Foundation
 import AVKit
+import Combine
+import SwiftUI
 
 final class SpeechGoogleAPIViewModel: ObservableObject {
     
@@ -38,11 +40,17 @@ final class SpeechGoogleAPIViewModel: ObservableObject {
     
     private let soundManager = SoundManager.instanse
     
+    var timerCancellables: AnyCancellable?
+    
     private var tasks: [Task<Void, Never>] = []
     
     @MainActor
     init() {
         getDataFromUserDefaults()
+    }
+    
+    deinit {
+        timerCancellables?.cancel()
     }
     
     func getVoice(text: String) {
@@ -81,6 +89,29 @@ final class SpeechGoogleAPIViewModel: ObservableObject {
         }
         
         tasks.append(task)
+    }
+    
+    @MainActor
+    func setUpTimer() {
+        timerCancellables = Timer
+            .publish(every: 0.1, on: .main, in: .common)
+            .autoconnect()
+            .sink { [weak self] _ in
+                
+                guard let self = self else { return }
+                
+                guard let currentTime = self.voice?.currentTime else { return }
+                
+                guard let isPlaying = voice?.isPlaying else { return }
+                
+                self.currentTime = currentTime
+                
+                self.isPlaying = isPlaying
+                
+                if !isPlaying {
+                    timerCancellables?.cancel()
+                }
+            }
     }
     
     func cancel() {
