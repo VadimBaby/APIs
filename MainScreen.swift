@@ -10,7 +10,7 @@ import SwiftUI
 struct MainScreen: View {
     var body: some View {
         TabView {
-            Text("Speech")
+            SpeechGoogleAPIView()
                 .tabItem {
                     Image(systemName: "waveform")
                     Text("Speech")
