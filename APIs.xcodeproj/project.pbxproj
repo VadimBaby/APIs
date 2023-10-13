@@ -17,6 +17,7 @@
 		2C0667CE2AD9A936002D521C /* Speakers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0667CD2AD9A936002D521C /* Speakers.swift */; };
 		2C0667D02AD9A98E002D521C /* SpeechGoogleAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0667CF2AD9A98E002D521C /* SpeechGoogleAPIModel.swift */; };
 		2C0667D22AD9A9B2002D521C /* SpeechGoogleAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0667D12AD9A9B2002D521C /* SpeechGoogleAPIDataManager.swift */; };
+		2C0667D42AD9A9E7002D521C /* SpeechGoogleAPIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0667D32AD9A9E7002D521C /* SpeechGoogleAPIViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		2C0667CD2AD9A936002D521C /* Speakers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speakers.swift; sourceTree = "<group>"; };
 		2C0667CF2AD9A98E002D521C /* SpeechGoogleAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechGoogleAPIModel.swift; sourceTree = "<group>"; };
 		2C0667D12AD9A9B2002D521C /* SpeechGoogleAPIDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechGoogleAPIDataManager.swift; sourceTree = "<group>"; };
+		2C0667D32AD9A9E7002D521C /* SpeechGoogleAPIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechGoogleAPIViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				2C0667CD2AD9A936002D521C /* Speakers.swift */,
 				2C0667CF2AD9A98E002D521C /* SpeechGoogleAPIModel.swift */,
 				2C0667D12AD9A9B2002D521C /* SpeechGoogleAPIDataManager.swift */,
+				2C0667D32AD9A9E7002D521C /* SpeechGoogleAPIViewModel.swift */,
 			);
 			path = SpeechGoogleAPI;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				2C0667CA2AD9A868002D521C /* Errors.swift in Sources */,
 				2C0667CC2AD9A8F5002D521C /* VoiceParameterModel.swift in Sources */,
 				2C0667C32AD9A779002D521C /* MainScreen.swift in Sources */,
+				2C0667D42AD9A9E7002D521C /* SpeechGoogleAPIViewModel.swift in Sources */,
 				2C0667D02AD9A98E002D521C /* SpeechGoogleAPIModel.swift in Sources */,
 				2C0667CE2AD9A936002D521C /* Speakers.swift in Sources */,
 				2C0667B52AD9A2BD002D521C /* APIsApp.swift in Sources */,
