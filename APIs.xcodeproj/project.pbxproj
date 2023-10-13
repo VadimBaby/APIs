@@ -11,6 +11,8 @@
 		2C0667B92AD9A2BE002D521C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C0667B82AD9A2BE002D521C /* Assets.xcassets */; };
 		2C0667BC2AD9A2BE002D521C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C0667BB2AD9A2BE002D521C /* Preview Assets.xcassets */; };
 		2C0667C32AD9A779002D521C /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0667C22AD9A779002D521C /* MainScreen.swift */; };
+		2C0667C82AD9A842002D521C /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0667C72AD9A842002D521C /* SoundManager.swift */; };
+		2C0667CA2AD9A868002D521C /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0667C92AD9A868002D521C /* Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		2C0667B82AD9A2BE002D521C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C0667BB2AD9A2BE002D521C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2C0667C22AD9A779002D521C /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = SOURCE_ROOT; };
+		2C0667C72AD9A842002D521C /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		2C0667C92AD9A868002D521C /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +57,10 @@
 			children = (
 				2C0667C22AD9A779002D521C /* MainScreen.swift */,
 				2C0667B42AD9A2BD002D521C /* APIsApp.swift */,
+				2C0667C72AD9A842002D521C /* SoundManager.swift */,
+				2C0667C92AD9A868002D521C /* Errors.swift */,
 				2C0667B82AD9A2BE002D521C /* Assets.xcassets */,
+				2C0667C42AD9A7FC002D521C /* SpeechGoogleAPI */,
 				2C0667BA2AD9A2BE002D521C /* Preview Content */,
 			);
 			path = APIs;
@@ -65,6 +72,13 @@
 				2C0667BB2AD9A2BE002D521C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2C0667C42AD9A7FC002D521C /* SpeechGoogleAPI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SpeechGoogleAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C0667CA2AD9A868002D521C /* Errors.swift in Sources */,
 				2C0667C32AD9A779002D521C /* MainScreen.swift in Sources */,
 				2C0667B52AD9A2BD002D521C /* APIsApp.swift in Sources */,
+				2C0667C82AD9A842002D521C /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
