@@ -104,6 +104,13 @@ final class SpeechGoogleAPIViewModel: ObservableObject {
     }
     
     @MainActor
+    func pauseVoice() {
+        voice?.pause()
+        
+        self.isPlaying = false
+    }
+    
+    @MainActor
     private func setUpTimer() {
         timerCancellables = Timer
             .publish(every: 0.1, on: .main, in: .common)
