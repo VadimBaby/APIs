@@ -15,6 +15,7 @@
 		2C0667CA2AD9A868002D521C /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0667C92AD9A868002D521C /* Errors.swift */; };
 		2C0667CC2AD9A8F5002D521C /* VoiceParameterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0667CB2AD9A8F5002D521C /* VoiceParameterModel.swift */; };
 		2C0667CE2AD9A936002D521C /* Speakers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0667CD2AD9A936002D521C /* Speakers.swift */; };
+		2C0667D02AD9A98E002D521C /* SpeechGoogleAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0667CF2AD9A98E002D521C /* SpeechGoogleAPIModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		2C0667C92AD9A868002D521C /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		2C0667CB2AD9A8F5002D521C /* VoiceParameterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceParameterModel.swift; sourceTree = "<group>"; };
 		2C0667CD2AD9A936002D521C /* Speakers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speakers.swift; sourceTree = "<group>"; };
+		2C0667CF2AD9A98E002D521C /* SpeechGoogleAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechGoogleAPIModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				2C0667CB2AD9A8F5002D521C /* VoiceParameterModel.swift */,
 				2C0667CD2AD9A936002D521C /* Speakers.swift */,
+				2C0667CF2AD9A98E002D521C /* SpeechGoogleAPIModel.swift */,
 			);
 			path = SpeechGoogleAPI;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				2C0667CA2AD9A868002D521C /* Errors.swift in Sources */,
 				2C0667CC2AD9A8F5002D521C /* VoiceParameterModel.swift in Sources */,
 				2C0667C32AD9A779002D521C /* MainScreen.swift in Sources */,
+				2C0667D02AD9A98E002D521C /* SpeechGoogleAPIModel.swift in Sources */,
 				2C0667CE2AD9A936002D521C /* Speakers.swift in Sources */,
 				2C0667B52AD9A2BD002D521C /* APIsApp.swift in Sources */,
 				2C0667C82AD9A842002D521C /* SoundManager.swift in Sources */,
