@@ -40,6 +40,11 @@ final class SpeechGoogleAPIViewModel: ObservableObject {
     
     private var tasks: [Task<Void, Never>] = []
     
+    @MainActor
+    init() {
+        getDataFromUserDefaults()
+    }
+    
     func getVoice(text: String) {
          let task = Task {
              do {
@@ -81,5 +86,19 @@ final class SpeechGoogleAPIViewModel: ObservableObject {
     func cancel() {
         tasks.forEach{ $0.cancel() }
         tasks = []
+    }
+    
+    @MainActor private func getDataFromUserDefaults() {
+        let speakerString = UserDefaults.standard.string(forKey: "speaker")
+        
+        if let speakerString {
+            self.speaker = Speakers.getVoiceFromString(value: speakerString)
+        }
+        
+        let rapidKey = UserDefaults.standard.string(forKey: "rapidKeyForGoogleSpeech")
+        
+        if let rapidKey {
+            self.rapidKey = rapidKey
+        }
     }
 }
