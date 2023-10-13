@@ -40,7 +40,7 @@ final class SpeechGoogleAPIViewModel: ObservableObject {
     
     private let soundManager = SoundManager.instanse
     
-    var timerCancellables: AnyCancellable?
+    private var timerCancellables: AnyCancellable?
     
     private var tasks: [Task<Void, Never>] = []
     
