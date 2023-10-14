@@ -23,6 +23,7 @@
 		2C0B51B22ADACA2800E38A74 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B51B12ADACA2800E38A74 /* CoreDataManager.swift */; };
 		2C0B51B52ADACA4400E38A74 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B51B32ADACA4400E38A74 /* CoreData.xcdatamodeld */; };
 		2C0B51B72ADACAE500E38A74 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B51B62ADACAE500E38A74 /* MessageModel.swift */; };
+		2C0B51B92ADACBCC00E38A74 /* ChatGPTResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B51B82ADACBCC00E38A74 /* ChatGPTResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		2C0B51B12ADACA2800E38A74 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		2C0B51B42ADACA4400E38A74 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		2C0B51B62ADACAE500E38A74 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		2C0B51B82ADACBCC00E38A74 /* ChatGPTResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				2C0667C72AD9A842002D521C /* SoundManager.swift */,
 				2C0667C92AD9A868002D521C /* Errors.swift */,
 				2C0667B82AD9A2BE002D521C /* Assets.xcassets */,
+				2C0B51B32ADACA4400E38A74 /* CoreData.xcdatamodeld */,
 				2C0B51B12ADACA2800E38A74 /* CoreDataManager.swift */,
 				2C0B51AE2ADAC7F200E38A74 /* ChatGPT */,
 				2C0667C42AD9A7FC002D521C /* SpeechGoogleAPI */,
@@ -113,8 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				2C0B51AF2ADAC81900E38A74 /* ChatGPTManager.swift */,
-				2C0B51B32ADACA4400E38A74 /* CoreData.xcdatamodeld */,
 				2C0B51B62ADACAE500E38A74 /* MessageModel.swift */,
+				2C0B51B82ADACBCC00E38A74 /* ChatGPTResponseModel.swift */,
 			);
 			path = ChatGPT;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				2C0B51B72ADACAE500E38A74 /* MessageModel.swift in Sources */,
 				2C0667D62AD9ACA0002D521C /* SpeechGoogleAPIView.swift in Sources */,
 				2C0667B52AD9A2BD002D521C /* APIsApp.swift in Sources */,
+				2C0B51B92ADACBCC00E38A74 /* ChatGPTResponseModel.swift in Sources */,
 				2C0667D22AD9A9B2002D521C /* SpeechGoogleAPIDataManager.swift in Sources */,
 				2C0667C82AD9A842002D521C /* SoundManager.swift in Sources */,
 			);
