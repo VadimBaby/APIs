@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+@MainActor
+final class ChatGPTViewModel: ObservableObject {
+    
+    @Published private(set) var messages: [MessageModel] = []
+    
+    @Published public var rapidKey: String = ChatGPTConstants.rapidKey {
+        didSet {
+            if !rapidKey.isEmpty {
+                UserDefaults.standard.set(rapidKey, forKey: "rapidKeyForChatGPT")
+            }
+        }
+    }
+}
