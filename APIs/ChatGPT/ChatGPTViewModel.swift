@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 @MainActor
 final class ChatGPTViewModel: ObservableObject {
@@ -27,7 +28,30 @@ final class ChatGPTViewModel: ObservableObject {
     private var tasks: [Task<Void, Never>] = []
     
     init() {
+        getEntities()
         getRapidKeyFromUserDefault()
+    }
+    
+    private func getEntities() {
+        let request = NSFetchRequest<MessageEntity>(entityName: "MessageEntity")
+        
+        do {
+            let entities: [MessageEntity] = try coreDataManager.context.fetch(request)
+            
+            messages = entities.compactMap({ entity -> MessageModel? in
+                guard let id = entity.id,
+                      let text = entity.text,
+                      let date = entity.date,
+                      let typeString = entity.type,
+                      let type = TypeMessage.getTypeMessageFromString(string: typeString)else { return nil }
+                
+                return MessageModel(id: id, text: text, date: date, type: type)
+            }).sorted(by: { $0.date < $1.date })
+            
+            
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     @ChatGPTManagerActor
