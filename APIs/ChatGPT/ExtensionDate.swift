@@ -12,13 +12,13 @@ extension Date {
         let formatter = DateFormatter()
         formatter.dateStyle = dateStyle
         
-        let daysBetween = self.daysBetween(date: Date())
+        let daysBetween = daysBetween(date: Date())
         
         if daysBetween == 0 {
             return "Today"
         } else if daysBetween == 1 {
             return "Yesterday"
-        } else if daysBetween <= 5 {
+        } else if daysBetween < 5 {
             let weekdayIndex = Calendar.current.component(.weekday, from: self) - 1
             return formatter.weekdaySymbols[weekdayIndex]
         }
@@ -28,7 +28,6 @@ extension Date {
     
     func daysBetween(date: Date) -> Int {
         let calendar = Calendar.current
-        
         let date1 = calendar.startOfDay(for: self)
         let date2 = calendar.startOfDay(for: date)
         
