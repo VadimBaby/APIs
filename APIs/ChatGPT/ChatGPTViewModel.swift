@@ -24,6 +24,10 @@ final class ChatGPTViewModel: ObservableObject {
     
     private let coreDataManager = CoreDataManager.instance
     
+    init() {
+        getRapidKeyFromUserDefault()
+    }
+    
     @ChatGPTManagerActor
     private func getResponse(text: String) async {
         do {
@@ -62,5 +66,13 @@ final class ChatGPTViewModel: ObservableObject {
         newMessage.type = message.type.rawValue
         
         coreDataManager.save()
+    }
+    
+    private func getRapidKeyFromUserDefault() {
+        let rapidKey = UserDefaults.standard.string(forKey: "rapidKeyForChatGPT")
+        
+        guard let rapidKey else { return }
+        
+        self.rapidKey = rapidKey
     }
 }
