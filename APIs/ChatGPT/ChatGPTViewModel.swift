@@ -32,12 +32,12 @@ final class ChatGPTViewModel: ObservableObject {
         getRapidKeyFromUserDefault()
     }
     
-    func sendMessage(text: String) -> MessageModel {
+    func sendMessage(text: String, setMessageIDToScroll: @escaping (_ id: UUID) -> Void) -> MessageModel {
         let message = MessageModel(text: text, type: .me)
         
         messages.append(message)
         
-        sendMessageToChatGPT(text: message.text)
+        sendMessageToChatGPT(text: message.text, setMessageIDToScroll: setMessageIDToScroll)
         
         addMessage(message: message)
         
@@ -89,7 +89,7 @@ final class ChatGPTViewModel: ObservableObject {
     }
     
     @ChatGPTManagerActor
-    private func getResponse(text: String) async {
+    private func getResponse(text: String, setMessageIDToScroll: (_ id: UUID) -> Void) async {
         do {
             let data = try await manager.getResponse(text: text, rapidKey: rapidKey)
             
@@ -110,6 +110,8 @@ final class ChatGPTViewModel: ObservableObject {
                 
                 self.messages.append(answer)
                 
+                setMessageIDToScroll(answer.id)
+                
                 addMessage(message: answer)
             }
         } catch {
@@ -118,9 +120,9 @@ final class ChatGPTViewModel: ObservableObject {
     }
     
     @MainActor
-    private func sendMessageToChatGPT(text: String) {
+    private func sendMessageToChatGPT(text: String, setMessageIDToScroll: @escaping (_ id: UUID) -> Void) {
         let task1 = Task {
-            await getResponse(text: text)
+            await getResponse(text: text, setMessageIDToScroll: setMessageIDToScroll)
         }
         
         tasks.append(task1)

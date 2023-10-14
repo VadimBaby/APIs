@@ -136,7 +136,10 @@ extension ChatGPTView {
     }
     
     private func sendMessage() {
-        let message = viewModel.sendMessage(text: text)
+        let message = viewModel.sendMessage(text: text) { id in
+            messageIDToScroll = id
+        }
+        
         messageIDToScroll = message.id
         text = ""
     }
