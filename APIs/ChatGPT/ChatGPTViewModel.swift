@@ -32,6 +32,18 @@ final class ChatGPTViewModel: ObservableObject {
         getRapidKeyFromUserDefault()
     }
     
+    func sendMessage(text: String) -> MessageModel {
+        let message = MessageModel(text: text, type: .me)
+        
+        messages.append(message)
+        
+        sendMessageToChatGPT(text: message.text)
+        
+        addMessage(message: message)
+        
+        return message
+    }
+    
     private func getEntities() {
         let request = NSFetchRequest<MessageEntity>(entityName: "MessageEntity")
         
