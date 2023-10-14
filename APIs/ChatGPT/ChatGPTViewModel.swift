@@ -19,4 +19,8 @@ final class ChatGPTViewModel: ObservableObject {
             }
         }
     }
+    
+    private let manager = ChatGPTManagerActor.shared
+    
+    private let coreDataManager = CoreDataManager.instance
 }
