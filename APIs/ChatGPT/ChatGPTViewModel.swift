@@ -24,6 +24,8 @@ final class ChatGPTViewModel: ObservableObject {
     
     private let coreDataManager = CoreDataManager.instance
     
+    private var tasks: [Task<Void, Never>] = []
+    
     init() {
         getRapidKeyFromUserDefault()
     }
@@ -57,6 +59,15 @@ final class ChatGPTViewModel: ObservableObject {
         }
     }
     
+    @MainActor
+    private func sendMessageToChatGPT(text: String) {
+        let task1 = Task {
+            await getResponse(text: text)
+        }
+        
+        tasks.append(task1)
+    }
+    
     private func addMessage(message: MessageModel) {
         let newMessage = MessageEntity(context: coreDataManager.context)
         
@@ -74,5 +85,10 @@ final class ChatGPTViewModel: ObservableObject {
         guard let rapidKey else { return }
         
         self.rapidKey = rapidKey
+    }
+    
+    func cancel() {
+        tasks.forEach{ $0.cancel() }
+        tasks = []
     }
 }
