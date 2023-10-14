@@ -22,6 +22,7 @@
 		2C0B51B02ADAC81900E38A74 /* ChatGPTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B51AF2ADAC81900E38A74 /* ChatGPTManager.swift */; };
 		2C0B51B22ADACA2800E38A74 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B51B12ADACA2800E38A74 /* CoreDataManager.swift */; };
 		2C0B51B52ADACA4400E38A74 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B51B32ADACA4400E38A74 /* CoreData.xcdatamodeld */; };
+		2C0B51B72ADACAE500E38A74 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B51B62ADACAE500E38A74 /* MessageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		2C0B51AF2ADAC81900E38A74 /* ChatGPTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTManager.swift; sourceTree = "<group>"; };
 		2C0B51B12ADACA2800E38A74 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		2C0B51B42ADACA4400E38A74 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		2C0B51B62ADACAE500E38A74 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			children = (
 				2C0B51AF2ADAC81900E38A74 /* ChatGPTManager.swift */,
 				2C0B51B32ADACA4400E38A74 /* CoreData.xcdatamodeld */,
+				2C0B51B62ADACAE500E38A74 /* MessageModel.swift */,
 			);
 			path = ChatGPT;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				2C0667D02AD9A98E002D521C /* SpeechGoogleAPIModel.swift in Sources */,
 				2C0B51B22ADACA2800E38A74 /* CoreDataManager.swift in Sources */,
 				2C0667CE2AD9A936002D521C /* Speakers.swift in Sources */,
+				2C0B51B72ADACAE500E38A74 /* MessageModel.swift in Sources */,
 				2C0667D62AD9ACA0002D521C /* SpeechGoogleAPIView.swift in Sources */,
 				2C0667B52AD9A2BD002D521C /* APIsApp.swift in Sources */,
 				2C0667D22AD9A9B2002D521C /* SpeechGoogleAPIDataManager.swift in Sources */,
