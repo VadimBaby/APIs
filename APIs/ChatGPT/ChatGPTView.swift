@@ -61,6 +61,7 @@ struct ChatGPTView: View {
         .onDisappear{
             viewModel.cancel()
         }
+         .sheet(isPresented: $showSettingsSheet, content: {ChatGPTSettingsSheet(text: $viewModel.rapidKey)})
     }
     
     private func scrollTo(messageID: UUID, anchor: UnitPoint? = nil, shouldAnimate: Bool, scrollReader: ScrollViewProxy) {

@@ -27,6 +27,7 @@
 		2C0B51BF2ADACEF800E38A74 /* ChatGPTViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B51BE2ADACEF800E38A74 /* ChatGPTViewModel.swift */; };
 		2C0B51C12ADAD0F500E38A74 /* ExtensionDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B51C02ADAD0F500E38A74 /* ExtensionDate.swift */; };
 		2C0B51C32ADAD26100E38A74 /* ChatGPTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B51C22ADAD26100E38A74 /* ChatGPTView.swift */; };
+		2C0B51C72ADAD2F400E38A74 /* ChatGPTSettingsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B51C62ADAD2F400E38A74 /* ChatGPTSettingsSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		2C0B51BE2ADACEF800E38A74 /* ChatGPTViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTViewModel.swift; sourceTree = "<group>"; };
 		2C0B51C02ADAD0F500E38A74 /* ExtensionDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDate.swift; sourceTree = "<group>"; };
 		2C0B51C22ADAD26100E38A74 /* ChatGPTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTView.swift; sourceTree = "<group>"; };
+		2C0B51C62ADAD2F400E38A74 /* ChatGPTSettingsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTSettingsSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				2C0B51BE2ADACEF800E38A74 /* ChatGPTViewModel.swift */,
 				2C0B51C02ADAD0F500E38A74 /* ExtensionDate.swift */,
 				2C0B51C22ADAD26100E38A74 /* ChatGPTView.swift */,
+				2C0B51C62ADAD2F400E38A74 /* ChatGPTSettingsSheet.swift */,
 			);
 			path = ChatGPT;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				2C0B51C32ADAD26100E38A74 /* ChatGPTView.swift in Sources */,
 				2C0B51B92ADACBCC00E38A74 /* ChatGPTResponseModel.swift in Sources */,
 				2C0667D22AD9A9B2002D521C /* SpeechGoogleAPIDataManager.swift in Sources */,
+				2C0B51C72ADAD2F400E38A74 /* ChatGPTSettingsSheet.swift in Sources */,
 				2C0667C82AD9A842002D521C /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
