@@ -35,7 +35,7 @@ struct ChatGPTView: View {
                             }
                             .onAppear{
                                 if let messageID = viewModel.messages.last?.id {
-                                    scrollTo(messageID: messageID, anchor: .bottom, shouldAnimate: false, scrollReader: scrollReader)
+                                    scrollTo(messageID: messageID, anchor: .center, shouldAnimate: false, scrollReader: scrollReader)
                                 }
                             }
                     }
