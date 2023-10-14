@@ -16,7 +16,9 @@ struct MainScreen: View {
                     Text("Speech")
                 }
             
-            ChatGPTView()
+            NavigationStack{
+                ChatGPTView()
+            }
                 .tabItem {
                     Image(systemName: "message")
                     Text("ChatGPT")
