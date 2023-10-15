@@ -39,6 +39,7 @@ struct SpeechGoogleAPIView: View {
                     HStack(alignment: .center){
                         Spacer()
                         ProgressView()
+                            .tint(Color.secondary)
                         Spacer()
                     }
                     .frame(maxWidth: .infinity)
