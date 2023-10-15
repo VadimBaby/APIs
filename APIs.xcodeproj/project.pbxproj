@@ -28,6 +28,7 @@
 		2C0B51C12ADAD0F500E38A74 /* ExtensionDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B51C02ADAD0F500E38A74 /* ExtensionDate.swift */; };
 		2C0B51C32ADAD26100E38A74 /* ChatGPTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B51C22ADAD26100E38A74 /* ChatGPTView.swift */; };
 		2C0B51C72ADAD2F400E38A74 /* ChatGPTSettingsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B51C62ADAD2F400E38A74 /* ChatGPTSettingsSheet.swift */; };
+		2C5DC1A22ADBBDC700AD8EDF /* DefaultActionButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5DC1A12ADBBDC700AD8EDF /* DefaultActionButtonModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		2C0B51C02ADAD0F500E38A74 /* ExtensionDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDate.swift; sourceTree = "<group>"; };
 		2C0B51C22ADAD26100E38A74 /* ChatGPTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTView.swift; sourceTree = "<group>"; };
 		2C0B51C62ADAD2F400E38A74 /* ChatGPTSettingsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTSettingsSheet.swift; sourceTree = "<group>"; };
+		2C5DC1A12ADBBDC700AD8EDF /* DefaultActionButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultActionButtonModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				2C0667B82AD9A2BE002D521C /* Assets.xcassets */,
 				2C0B51B32ADACA4400E38A74 /* CoreData.xcdatamodeld */,
 				2C0B51B12ADACA2800E38A74 /* CoreDataManager.swift */,
+				2C5DC1A02ADBBD8600AD8EDF /* ViewModifiers */,
 				2C0B51AE2ADAC7F200E38A74 /* ChatGPT */,
 				2C0667C42AD9A7FC002D521C /* SpeechGoogleAPI */,
 				2C0667BA2AD9A2BE002D521C /* Preview Content */,
@@ -132,6 +135,14 @@
 				2C0B51C62ADAD2F400E38A74 /* ChatGPTSettingsSheet.swift */,
 			);
 			path = ChatGPT;
+			sourceTree = "<group>";
+		};
+		2C5DC1A02ADBBD8600AD8EDF /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				2C5DC1A12ADBBDC700AD8EDF /* DefaultActionButtonModifier.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +217,7 @@
 			files = (
 				2C0667CA2AD9A868002D521C /* Errors.swift in Sources */,
 				2C0667CC2AD9A8F5002D521C /* VoiceParameterModel.swift in Sources */,
+				2C5DC1A22ADBBDC700AD8EDF /* DefaultActionButtonModifier.swift in Sources */,
 				2C0667C32AD9A779002D521C /* MainScreen.swift in Sources */,
 				2C0B51B52ADACA4400E38A74 /* CoreData.xcdatamodeld in Sources */,
 				2C0B51B02ADAC81900E38A74 /* ChatGPTManager.swift in Sources */,
