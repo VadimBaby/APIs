@@ -19,3 +19,10 @@ struct DefaultActionButtonModifier: ViewModifier {
             .clipShape(.rect(cornerRadius: 15))
     }
 }
+
+extension View {
+    func withDefaultActionButtonFormatting(_ backgroundColor: Color = Color.blue) -> some View {
+        self
+            .modifier(DefaultActionButtonModifier(backgroundColor: backgroundColor))
+    }
+}
