@@ -22,20 +22,14 @@ struct ChatGPTSettingsSheet: View {
                     text = ChatGPTConstants.rapidKey
                 }, label: {
                     Text("Paste Default API KEY")
-                        .tint(Color.white)
-                        .padding()
-                        .background(Color.green)
-                        .clipShape(.rect(cornerRadius: 15))
+                        .withDefaultActionButtonFormatting(Color.green)
                 })
                 Spacer()
                 Button(action: {
                     text = ""
                 }, label: {
                     Text("Clear")
-                        .tint(Color.white)
-                        .padding()
-                        .background(Color.red)
-                        .clipShape(.rect(cornerRadius: 15))
+                        .withDefaultActionButtonFormatting(Color.red)
                 })
             }
         }

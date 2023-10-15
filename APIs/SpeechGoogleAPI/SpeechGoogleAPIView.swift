@@ -104,20 +104,14 @@ struct SpeechGoogleAPIView: View {
                             viewModel.rapidKey = SpeechGoogleAPIConstants.rapidKey
                         }, label: {
                             Text("Paste Default API KEY")
-                                .tint(Color.white)
-                                .padding()
-                                .background(Color.green)
-                                .clipShape(.rect(cornerRadius: 15))
+                                .withDefaultActionButtonFormatting(Color.green)
                         })
                         Spacer()
                         Button(action: {
                             viewModel.rapidKey = ""
                         }, label: {
                             Text("Clear")
-                                .tint(Color.white)
-                                .padding()
-                                .background(Color.red)
-                                .clipShape(.rect(cornerRadius: 15))
+                                .withDefaultActionButtonFormatting(Color.red)
                         })
                     }
                 }
