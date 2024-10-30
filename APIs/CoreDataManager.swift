@@ -13,7 +13,7 @@ class CoreDataManager {
     
     let container: NSPersistentContainer
     let context: NSManagedObjectContext
-    
+    // asdsadsadad
     init(){
         container = NSPersistentContainer(name: "CoreData")
         container.loadPersistentStores { description, error in
